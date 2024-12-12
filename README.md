@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection using GANs
 
-![Credit Card Fraud](credit_card_fraud.png)
+![Credit Card Fraud](images/credit_card_fraud.png)
 
 ## Project Overview
 
@@ -41,7 +41,7 @@ The GAN consists of:
 The project includes various visualizations for evaluating the model's performance.
 
 #### PCA Visualization of Real vs Synthetic Data
-![Credit Card Fraud PCA](credit_card_fraud_2.png)
+![Credit Card Fraud PCA](images/credit_card_fraud_2.png)
 
 #### Feature Distribution Comparison
 Feature distributions of real and synthetic data are compared using histogram plots to ensure the generator produces realistic outputs.
