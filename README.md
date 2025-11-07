@@ -1,5 +1,3 @@
-# Credit Card Fraud Detection using GANs
-
 ![Credit Card Fraud](images/credit_card_fraud.png)
 
 # 📚 Case Study: Strengthening Fraud Detection Through Synthetic Data Generation
