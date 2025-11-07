@@ -2,54 +2,56 @@
 
 ![Credit Card Fraud](images/credit_card_fraud.png)
 
-## Project Overview
+# 📚 Case Study: Strengthening Fraud Detection Through Synthetic Data Generation
 
-This project implements a Generative Adversarial Network (GAN) to detect and analyze fraudulent credit card transactions. GANs are used to generate synthetic fraudulent data points, enabling a more balanced dataset for training machine learning models. The project demonstrates the power of GANs in combating real-world issues like fraud detection where data imbalance is a significant challenge.
+### ✅ Scenario
+A financial institution experiences rising fraud losses but has a major obstacle:  
+fraudulent transactions make up **less than 1%** of all credit card activity.
 
-## Accomplishments
+This imbalance causes their existing fraud model to:
 
-1. **Built and Trained a GAN**:
-   - Created a generator to produce synthetic fraudulent data points.
-   - Designed a discriminator to distinguish between real and synthetic data.
-   - Combined the generator and discriminator to form a complete GAN model.
+- Miss rare fraud patterns  
+- Overfit to normal transactions  
+- Produce high accuracy but low fraud recall  
+- Fail in real-time decision scenarios  
 
-2. **Visualized Synthetic Data**:
-   - Used PCA to reduce dimensionality and visually compare synthetic and real data.
-   - Highlighted the differences and similarities between synthetic and real data distributions.
+The institution needs a method to **increase fraud representation** without collecting sensitive customer data.
 
-3. **Monitored and Evaluated GAN Performance**:
-   - Monitored the GAN's performance during training to ensure meaningful synthetic data generation.
-   - Compared individual feature distributions of synthetic and real data.
-
-4. **Analyzed Data with Plots**:
-   - Generated interactive and static visualizations to showcase feature distributions and GAN outputs.
+A GAN-based synthetic fraud generator is deployed to solve the problem.
 
 ---
 
-## Key Components
+### ✅ Step 1 — Understanding the Imbalance Problem
+The dataset contains hundreds of thousands of legitimate transactions, but only a few hundred fraud cases.  
+This leads to:
 
-### GAN Architecture
-The GAN consists of:
-- **Generator**: A neural network designed to generate synthetic fraudulent data points.
-- **Discriminator**: A neural network trained to distinguish between real and synthetic data.
+- Poor model learning  
+- High false-negative rates  
+- Minimal visibility into fraud-only behavior  
 
-### Training and Evaluation
-- The GAN was trained using a dataset of credit card transactions.
-- The trained generator was used to produce synthetic fraudulent data, which was then compared against the real data.
-
-### Visualizations
-The project includes various visualizations for evaluating the model's performance.
-
-#### PCA Visualization of Real vs Synthetic Data
-![Credit Card Fraud PCA](images/credit_card_fraud_2.png)
-
-#### Feature Distribution Comparison
-Feature distributions of real and synthetic data are compared using histogram plots to ensure the generator produces realistic outputs.
+A GAN is chosen because it can create **new, statistically-accurate fraud samples** while protecting customer information.
 
 ---
 
-## Tools and Technologies Used
+### ✅ Step 2 — Training the GAN to Simulate Fraud
+The team builds a two-network adversarial system:
 
-- **Programming Language**: Python
-- **Libraries**: TensorFlow, Keras, NumPy, Pandas, Matplotlib, Seaborn, Plotly
-- **Machine Learning Techniques**: Generative Adversarial Networks (GANs), PCA
+- **Generator:** produces synthetic fraudulent transactions  
+- **Discriminator:** evaluates whether samples are real or fake  
+
+Through adversarial training, the generator becomes skillful enough to mimic real fraud patterns without copying actual customer data.
+
+Synthetic fraud samples begin to closely match the statistical structure of the real cases.
+
+---
+
+### ✅ Step 3 — Validating Synthetic Fraud Quality
+Quality evaluation is performed using:
+
+- PCA dimensionality reduction  
+- Histogram matching  
+- Feature-level comparisons  
+
+Key results:
+
+- Synthetic fraud clusters overlap the real fraud re
